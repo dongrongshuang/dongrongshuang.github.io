@@ -66,17 +66,18 @@
   };
 </script>
 
-  <meta name="description" content="愿喜欢和合适撞个满怀！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DRSBlog">
-<meta property="og:url" content="https://yoursite.com/archives/2019/09/index.html">
+  <meta name="description" content="Mybatis常见问题总结什么是Mybatis？1231.Mybatis是一个半ORM（对象关系映射）框架，它内部封装了JDBC，开发时只需关注SQL语句本身，程序员直接编写原生态SQL，能够严格控制SQL执行性能，灵活度高2.可以使用XML或注解来配置和映射原生信息，将POJO映射成数据库中的记录，避免了几乎所有的JDBC代码和手动设置参数以及获取结果集。3.通过XML文件或注解方式将要执行的各">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mybatis">
+<meta property="og:url" content="https://yoursite.com/2019/10/11/mybatis/index.html">
 <meta property="og:site_name" content="DRSBlog">
-<meta property="og:description" content="愿喜欢和合适撞个满怀！">
+<meta property="og:description" content="Mybatis常见问题总结什么是Mybatis？1231.Mybatis是一个半ORM（对象关系映射）框架，它内部封装了JDBC，开发时只需关注SQL语句本身，程序员直接编写原生态SQL，能够严格控制SQL执行性能，灵活度高2.可以使用XML或注解来配置和映射原生信息，将POJO映射成数据库中的记录，避免了几乎所有的JDBC代码和手动设置参数以及获取结果集。3.通过XML文件或注解方式将要执行的各">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2019-10-11T01:49:31.778Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DRSBlog">
-<meta name="twitter:description" content="愿喜欢和合适撞个满怀！">
-  <link rel="canonical" href="https://yoursite.com/archives/2019/09/">
+<meta name="twitter:title" content="Mybatis">
+<meta name="twitter:description" content="Mybatis常见问题总结什么是Mybatis？1231.Mybatis是一个半ORM（对象关系映射）框架，它内部封装了JDBC，开发时只需关注SQL语句本身，程序员直接编写原生态SQL，能够严格控制SQL执行性能，灵活度高2.可以使用XML或注解来配置和映射原生信息，将POJO映射成数据库中的记录，避免了几乎所有的JDBC代码和手动设置参数以及获取结果集。3.通过XML文件或注解方式将要执行的各">
+  <link rel="canonical" href="https://yoursite.com/2019/10/11/mybatis/">
 
 
 <script id="page-configurations">
@@ -84,13 +85,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
-    isArchive: true
+    isArchive: false
   };
 </script>
 
-  <title>归档 | DRSBlog</title>
+  <title>Mybatis | DRSBlog</title>
   
 
 
@@ -215,27 +216,6 @@
 
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 </nav>
 </div>
     </header>
@@ -253,153 +233,113 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        
-        
-        
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://yoursite.com/2019/10/11/mybatis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DongXiaofan">
+      <meta itemprop="description" content="愿喜欢和合适撞个满怀！">
+      <meta itemprop="image" content="/images/user.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DRSBlog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Mybatis
+
           
-        
-        <span class="collection-header">嗯..! 目前共计 6 篇日志。 继续努力。</span>
-      </div>
-      
+        </h1>
 
-      
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-  
-  
+              
+                
+              
 
-  
+              <time title="创建时间：2019-10-11 09:20:30 / 修改时间：09:49:31" itemprop="dateCreated datePublished" datetime="2019-10-11T09:20:30+08:00">2019-10-11</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
     
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
-  
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h5 id="Mybatis常见问题总结"><a href="#Mybatis常见问题总结" class="headerlink" title="Mybatis常见问题总结"></a>Mybatis常见问题总结</h5><h6 id="什么是Mybatis？"><a href="#什么是Mybatis？" class="headerlink" title="什么是Mybatis？"></a>什么是Mybatis？</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.Mybatis是一个半ORM（对象关系映射）框架，它内部封装了JDBC，开发时只需关注SQL语句本身，程序员直接编写原生态SQL，能够严格控制SQL执行性能，灵活度高</span><br><span class="line">2.可以使用XML或注解来配置和映射原生信息，将POJO映射成数据库中的记录，避免了几乎所有的JDBC代码和手动设置参数以及获取结果集。</span><br><span class="line">3.通过XML文件或注解方式将要执行的各种statement配置起来，并通java对象和statement中SQL的动态参数进行映射生成最终执行的SQL语句，最后由ybatis框架执行SQL并将结果映射为java对象并返回（从执行SQL到返回result的过程）。</span><br></pre></td></tr></table></figure><a id="more"></a>
 
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/09/traffic-light/" itemprop="url">
-            <span itemprop="name">JavaScript实现红绿灯控制</span>
-          </a>
-        
-      </h2>
+<h6 id="Mybatis的优点"><a href="#Mybatis的优点" class="headerlink" title="Mybatis的优点"></a>Mybatis的优点</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.基于SQL语句编程，灵活。不会对应用程序或者数据库的设计造成任何影响，SQL写在XML里，解除SQL与程序代码的耦合，便于统一管理；提供XML标签，支持编写动态SQL语句，可重用。</span><br><span class="line">2.与JDBC相比，减少50%以上的代码量，消除大量多余代码，不需手动开关连接</span><br><span class="line">3.很好的与各种数据库兼容</span><br><span class="line">4.能够与spring很好的集成</span><br><span class="line">5.提供映射标签，支持对象与数据库的ORM字段关系映射；提供对象关系映射标签，支持对象关系组件维护。</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-09T10:06:45+08:00"
-              content="2019-09-09">
-          09-09
-        </time>
-      </div>
+<h6 id="MyBatis框架的缺点"><a href="#MyBatis框架的缺点" class="headerlink" title="MyBatis框架的缺点"></a>MyBatis框架的缺点</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.SQL语句的编写工作量大，尤其当字段多，关联表多时，对开发人员编写SQL语句的功底有一定的要求。</span><br><span class="line">2.SQL语句依赖于数据库，导致数据库移植性差，不能随意更换数据库。</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/03/First-Passage/" itemprop="url">
-            <span itemprop="name">My First Passage</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-03T17:36:29+08:00"
-              content="2019-09-03">
-          09-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/03/Hexo-Next/" itemprop="url">
-            <span itemprop="name">Hexo框架下用Next主题美化</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-03T17:36:29+08:00"
-              content="2019-09-03">
-          09-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/03/My-New-Post/" itemprop="url">
-            <span itemprop="name">加密文章！谨慎访问</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-03T17:36:29+08:00"
-              content="2019-09-03">
-          09-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<h6 id="MyBatis框架适用场合"><a href="#MyBatis框架适用场合" class="headerlink" title="MyBatis框架适用场合"></a>MyBatis框架适用场合</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.专注于SQL本身，是一个灵活的DAO层解决方案。</span><br><span class="line">2.对性能要求很高，或者需求变化比较多的项目</span><br></pre></td></tr></table></figure>
 
 
     </div>
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:20px;">Ending  <i class="fa fa-heart"></i>Thank you for reading</div>
+    
+</div>
+  
+</div>
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/10/08/Spring/" rel="next" title="spring注解">
+                  <i class="fa fa-chevron-left"></i> spring注解
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
@@ -418,6 +358,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -430,6 +375,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Mybatis常见问题总结"><span class="nav-number">1.</span> <span class="nav-text">Mybatis常见问题总结</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#什么是Mybatis？"><span class="nav-number">1.1.</span> <span class="nav-text">什么是Mybatis？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Mybatis的优点"><span class="nav-number">1.2.</span> <span class="nav-text">Mybatis的优点</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#MyBatis框架的缺点"><span class="nav-number">1.3.</span> <span class="nav-text">MyBatis框架的缺点</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#MyBatis框架适用场合"><span class="nav-number">1.4.</span> <span class="nav-text">MyBatis框架适用场合</span></a></li></ol></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
