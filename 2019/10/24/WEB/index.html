@@ -73,7 +73,7 @@
 <meta property="og:site_name" content="DRSBlog">
 <meta property="og:description" content="Element -  UI安装1.npm 安装1npm install element-ui -S2.CDN1234&amp;lt;!-- 引入样式 --&amp;gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;https://unpkg.com/element-ui/lib/theme-chalk/index.css&amp;quot;&amp;gt;&amp;lt;!-- 引入组件">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2019-10-24T03:45:23.783Z">
+<meta property="og:updated_time" content="2019-10-25T08:05:26.730Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WEB前端">
 <meta name="twitter:description" content="Element -  UI安装1.npm 安装1npm install element-ui -S2.CDN1234&amp;lt;!-- 引入样式 --&amp;gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;https://unpkg.com/element-ui/lib/theme-chalk/index.css&amp;quot;&amp;gt;&amp;lt;!-- 引入组件">
@@ -267,11 +267,19 @@
                 
               
 
-              <time title="创建时间：2019-10-24 11:19:39 / 修改时间：11:45:23" itemprop="dateCreated datePublished" datetime="2019-10-24T11:19:39+08:00">2019-10-24</time>
+              <time title="创建时间：2019-10-24 11:19:39" itemprop="dateCreated datePublished" datetime="2019-10-24T11:19:39+08:00">2019-10-24</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-25 16:05:26" itemprop="dateModified" datetime="2019-10-25T16:05:26+08:00">2019-10-25</time>
+              </span>
             
           
 
@@ -298,7 +306,9 @@
 <p>2.按需引入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">借助babel-plugin-component,安装：npm install babel-plugin-component -D</span><br><span class="line">然后，将.babelrc修改为：</span><br><span class="line">&#123;</span><br><span class="line">    &quot;presets&quot;:[[&quot;es2015&quot;, &#123;&quot;modules&quot;: false&#125;]],</span><br><span class="line">    &quot;plugins&quot;: [</span><br><span class="line">        [</span><br><span class="line">            &quot;component&quot;,</span><br><span class="line">            &#123;</span><br><span class="line">                &quot;libraryName&quot;: &quot;element-ui&quot;,</span><br><span class="line">                &quot;styleLibraryName&quot;: &quot;theme-chalk&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">此时按需引入部分组件，需要在main.js中写一下内容</span><br><span class="line">import Vue from &apos;vue&apos;,</span><br><span class="line">import &#123;Button, Select,Form &#125; from &apos;element-ui&apos;;</span><br><span class="line">import App from &apos;./App.vue&apos;;</span><br><span class="line"></span><br><span class="line">Vue.component(Button.name, Button);</span><br><span class="line">Vue.component(Select.name, Select);</span><br><span class="line">Vue.component(Form.name, Form);</span><br><span class="line">或写为(推荐使用)</span><br><span class="line">Vue.use(Button);</span><br><span class="line">Vue.use(Select);</span><br><span class="line">Vue.use(Form);</span><br><span class="line">全局配置：Vue.prototype.$ELEMENT = &#123;size: &apos;small&apos;, zIndex: 3000 &#125;;</span><br><span class="line"></span><br><span class="line">new Vue(&#123;</span><br><span class="line">    el: &apos;#app&apos;,</span><br><span class="line">    render: h =&gt; h(App)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<h6 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h6>
+<h6 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h6><h6 id="Layout布局"><a href="#Layout布局" class="headerlink" title="Layout布局"></a>Layout布局</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">基础布局：</span><br><span class="line">通过基础的24分栏，迅速简便地创建布局，通过row和col组件，并通过col组件的span属性就可自由组合布局</span><br><span class="line">如</span><br><span class="line">&lt;el-row&gt;</span><br><span class="line">	&lt;el-col :span=&quot;24&quot;&gt;&lt;div&gt;一行一列&lt;/div&gt;&lt;/el-col&gt;</span><br><span class="line">&lt;/el-row&gt;</span><br><span class="line">&lt;el-row&gt;</span><br><span class="line">    &lt;el-col :span=&quot;12&quot;&gt;&lt;div&gt;一行第一列&lt;/div&gt;&lt;/el-col&gt;</span><br><span class="line">    &lt;el-col :span=&quot;12&quot;&gt;&lt;div&gt;一行第二列&lt;/div&gt;&lt;/el-col&gt;</span><br><span class="line">&lt;/el-row&gt;</span><br><span class="line">------------------------------------------------------------------------------------</span><br><span class="line">分栏间隔</span><br><span class="line">row组件提供 gutter 属性来指定每一栏之间的间隔，默认间隔为0。</span><br><span class="line">&lt;el-row :gutter=&quot;20&quot;&gt;</span><br><span class="line">	&lt;el-col :span=&quot;6&quot;&gt;&lt;div&gt;一行第一列&lt;/div&gt;&lt;/el-col&gt;</span><br><span class="line">	&lt;el-col :span=&quot;6&quot;&gt;&lt;div&gt;一行第二列&lt;/div&gt;&lt;/el-col&gt;</span><br><span class="line">	&lt;el-col :span=&quot;6&quot;&gt;&lt;div&gt;一行第三列&lt;/div&gt;&lt;/el-col&gt;</span><br><span class="line">	&lt;el-col :span=&quot;6&quot;&gt;&lt;div&gt;一行第四列&lt;/div&gt;&lt;/el-col&gt;</span><br><span class="line">&lt;/el-row&gt;</span><br></pre></td></tr></table></figure>
+
+
     </div>
 <div>
   
@@ -379,7 +389,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Element-UI"><span class="nav-number">1.</span> <span class="nav-text">Element -  UI</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#安装"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#在项目中使用Element"><span class="nav-number">1.2.</span> <span class="nav-text">在项目中使用Element</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#引入Element"><span class="nav-number">1.3.</span> <span class="nav-text">引入Element</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#组件"><span class="nav-number">1.4.</span> <span class="nav-text">组件</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Element-UI"><span class="nav-number">1.</span> <span class="nav-text">Element -  UI</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#安装"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#在项目中使用Element"><span class="nav-number">1.2.</span> <span class="nav-text">在项目中使用Element</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#引入Element"><span class="nav-number">1.3.</span> <span class="nav-text">引入Element</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#组件"><span class="nav-number">1.4.</span> <span class="nav-text">组件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Layout布局"><span class="nav-number">1.5.</span> <span class="nav-text">Layout布局</span></a></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
