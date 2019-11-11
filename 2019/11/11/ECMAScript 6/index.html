@@ -58,9 +58,9 @@
     path: '',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
+      copy_button: 'کپی',
+      copy_success: 'کپی شد',
+      copy_failure: 'کپی انجام نشد'
     },
     sidebarPadding: 40
   };
@@ -73,7 +73,7 @@
 <meta property="og:site_name" content="DRSBlog">
 <meta property="og:description" content="let和const命令1.let命令12345678基本用法ES6新增let命令用来声明变量，用法类似于var，但是所声明的变量只有在let命令所在的代码块内有效&amp;#123;    let a = 10;    var b = 1;&amp;#125;a   // a is not definedb   // 1">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2019-11-11T06:46:20.823Z">
+<meta property="og:updated_time" content="2019-11-11T07:33:23.159Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6">
 <meta name="twitter:description" content="let和const命令1.let命令12345678基本用法ES6新增let命令用来声明变量，用法类似于var，但是所声明的变量只有在let命令所在的代码块内有效&amp;#123;    let a = 10;    var b = 1;&amp;#125;a   // a is not definedb   // 1">
@@ -145,7 +145,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
+    <button aria-label="تغییر ناوبری">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -165,7 +165,7 @@
       
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>صفحه اصلی</a>
 
   </li>
       
@@ -209,7 +209,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>بایگانی</a>
 
   </li>
   </ul>
@@ -261,13 +261,13 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              <span class="post-meta-item-text">نوشته شده در</span>
 
               
                 
               
 
-              <time title="创建时间：2019-11-11 10:24:16 / 修改时间：14:46:20" itemprop="dateCreated datePublished" datetime="2019-11-11T10:24:16+08:00">2019-11-11</time>
+              <time title="ایجاد شده: 2019-11-11 10:24:16 / تغییر یافته: 15:33:23" itemprop="dateCreated datePublished" datetime="2019-11-11T10:24:16+08:00">2019-11-11</time>
             </span>
           
             
@@ -299,6 +299,23 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">typeof x;   // ReferenceError</span><br><span class="line">let x;</span><br><span class="line">这两句代码中，变量x 使用let命令声明，所以在声明之前，都属于x的“死区”，只要用到该变量就会报错，因此，typeof运行时就会抛出一个ReferenceError.</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">作为比较，如果一个变量根本没有被声明，使用typeof反而不会报错。</span><br><span class="line">typeof undeclared_variable   // &quot;undefined&quot;</span><br><span class="line">这一句代码，undeclared_variable是一个不存在的变量名，结果返回“undefined”。所以，在没有let之前，typeof运算符是百分百安全的，永远不会报错。现在这一点不成立了。变量一定要在声明之后使用，否则就报错。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">不允许重复声明</span><br><span class="line">let不允许在相同作用域内，重复声明同一个变量。</span><br><span class="line">// 报错</span><br><span class="line">funxtion func()&#123;</span><br><span class="line">    let a = 10;</span><br><span class="line">    var a = 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//报错</span><br><span class="line">function func()&#123;</span><br><span class="line">    let a = 10;</span><br><span class="line">    let a = 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因此，不能在函数内部重新声明参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function func(arg)&#123;</span><br><span class="line">    let arg;</span><br><span class="line">&#125;</span><br><span class="line">func()  //报错</span><br><span class="line"></span><br><span class="line">function func(arg)&#123;</span><br><span class="line">    &#123;</span><br><span class="line">        let arg;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">func()  //不报错</span><br></pre></td></tr></table></figure>
+
+<h6 id="块级作用域"><a href="#块级作用域" class="headerlink" title="块级作用域"></a>块级作用域</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">为什么需要块级作用域？</span><br><span class="line">ES5只有全局作用域和函数作用域，没有块级作用域，这带来很多不合理的场景。</span><br><span class="line">第一种场景，内层变量可能会覆盖外层变量。</span><br><span class="line">var tmp = new Date();</span><br><span class="line"></span><br><span class="line">function f() &#123;</span><br><span class="line">    console.log(tmp);</span><br><span class="line">    if(false) &#123;</span><br><span class="line">        var tmp = &apos;hello world&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">f(); // undefined</span><br><span class="line"></span><br><span class="line">上面代码的原意是，if代码块的外部使用外层的tmp变量，内部使用内层的tmp变量。但是，函数发执行后，输出结果为undefined，原因在于变量提升，导致内层的tmp变量覆盖了外层的tmp变量。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">第二种场景，用来计数的循环变量泄露为全局变量。</span><br><span class="line">var s = &apos;hello&apos;;</span><br><span class="line">for (var i = 0; i &lt; s.length; i++)&#123;</span><br><span class="line">    console.log(s[i]);</span><br><span class="line">&#125;</span><br><span class="line">console.log(i);    // 5</span><br><span class="line">上面代码中，变量只用来控制循环，但是循环结束后，它并没有消失，泄露成了全局变量。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ES6的块级作用域</span><br><span class="line">let实际上为JavaScript新增了块级作用域</span><br><span class="line">function f1()&#123;</span><br><span class="line">    let n = 5;</span><br><span class="line">    if(true) &#123;</span><br><span class="line">        let n = 10;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(n);   // 5</span><br><span class="line">&#125;</span><br><span class="line">这段代码有两个代码块，都声明了变量n,运行后输出5.这表示外层代码块不受内层代码块的影响。如果两次都使用var定义变量n,最后输出的值才是10.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ES6允许块级作用域的任意嵌套</span><br><span class="line">&#123;&#123;&#123;&#123;</span><br><span class="line">    &#123;let insane = &apos;Hello World&apos;&#125;</span><br><span class="line">    console.log(insane);  // 报错</span><br><span class="line">&#125;&#125;&#125;&#125;；</span><br><span class="line">此代码使用了一个五层的块级作用域，每一层都是一个单独的作用域。第四层作用域无法读取第五层作用域的内部变量。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">内层作用域可以定义外层作用域的同名变量</span><br><span class="line">&#123;&#123;&#123;&#123;</span><br><span class="line">    let insane = &apos;Hello World&apos;;</span><br><span class="line">    &#123;let insane = &apos;Hello World&apos;&#125;</span><br><span class="line">&#125;&#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -372,16 +389,16 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          文章目录
+          فهرست مطالب
         </li>
         <li class="sidebar-nav-overview">
-          站点概览
+          نمای کلی
         </li>
       </ul>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#let和const命令"><span class="nav-number">1.</span> <span class="nav-text">let和const命令</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#let和const命令"><span class="nav-number">1.</span> <span class="nav-text">let和const命令</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#块级作用域"><span class="nav-number">2.</span> <span class="nav-text">块级作用域</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -400,7 +417,7 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">9</span>
-          <span class="site-state-item-name">日志</span>
+          <span class="site-state-item-name">پست ها</span>
         </a>
       </div>
     
