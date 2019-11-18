@@ -73,7 +73,7 @@
 <meta property="og:site_name" content="DRSBlog">
 <meta property="og:description" content="封装函数 f，使 f 的 this 指向指定的对象123 function bindThis(f, oTarget) &amp;#123;     return f.bind(oTarget);&amp;#125;获取 url 中的参数 指定参数名称，返回该参数的值 或者 空字符串 不指定参数名称，返回全部的参数对象 或者 {} 如果存在多个同名参数，则返回数组">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2019-10-11T07:42:47.279Z">
+<meta property="og:updated_time" content="2019-11-18T05:40:45.912Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编程习题">
 <meta name="twitter:description" content="封装函数 f，使 f 的 this 指向指定的对象123 function bindThis(f, oTarget) &amp;#123;     return f.bind(oTarget);&amp;#125;获取 url 中的参数 指定参数名称，返回该参数的值 或者 空字符串 不指定参数名称，返回全部的参数对象 或者 {} 如果存在多个同名参数，则返回数组">
@@ -267,11 +267,19 @@
                 
               
 
-              <time title="创建时间：2019-10-11 14:26:18 / 修改时间：15:42:47" itemprop="dateCreated datePublished" datetime="2019-10-11T14:26:18+08:00">2019-10-11</time>
+              <time title="创建时间：2019-10-11 14:26:18" itemprop="dateCreated datePublished" datetime="2019-10-11T14:26:18+08:00">2019-10-11</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-18 13:40:45" itemprop="dateModified" datetime="2019-11-18T13:40:45+08:00">2019-11-18</time>
+              </span>
             
           
 
@@ -301,7 +309,23 @@
 <p>输出：[false, true, undefined, null, NaN, 0, 1, {}, {}, ‘a’]</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.uniq = function () &#123;</span><br><span class="line">    var resArr = [];</span><br><span class="line">    var flag = true;</span><br><span class="line">    for(var i = 0; i &lt; this.length; i++)&#123;</span><br><span class="line">        if(resArr.indesOf(this.length[i]) == -1)&#123;</span><br><span class="line">            if(this[i] != this[i])&#123;//排除NAN</span><br><span class="line">                if(flag)&#123;</span><br><span class="line">                    resArr.push(this[i]);</span><br><span class="line">                    flag = false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;else &#123;</span><br><span class="line">                resArr.push(this[i])</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return resArr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h6 id="外部JavaScript的优势"><a href="#外部JavaScript的优势" class="headerlink" title="外部JavaScript的优势"></a>外部JavaScript的优势</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">分离了HTML和代码</span><br><span class="line">使HTML和JavaScript更易于阅读和维护</span><br><span class="line">已缓存的JavaScript文件可加速页面加载</span><br><span class="line">如需向一张页面添加多个脚本文件，，请使用多个script标签</span><br></pre></td></tr></table></figure>
 
+<h6 id="JavaScript显示方案"><a href="#JavaScript显示方案" class="headerlink" title="JavaScript显示方案"></a>JavaScript显示方案</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">使用window.alert()写入警告框</span><br><span class="line">使用document.write()写入HTML输出</span><br><span class="line">使用innerHTML写入HTML元素</span><br><span class="line">使用console.log()写入浏览器控制台</span><br></pre></td></tr></table></figure>
+
+<h6 id="访问对象的属性"><a href="#访问对象的属性" class="headerlink" title="访问对象的属性"></a>访问对象的属性</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">objectName.propertyName</span><br><span class="line">objectName[&quot;propertyName&quot;]</span><br></pre></td></tr></table></figure>
+
+<h6 id="访问对象方法"><a href="#访问对象方法" class="headerlink" title="访问对象方法"></a>访问对象方法</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">objectName.methodName()</span><br><span class="line"></span><br><span class="line">name = person.fullName();</span><br><span class="line">如果不使用()访问fullName方法，则将返回函数定义</span><br><span class="line">name = person.fullName;</span><br><span class="line">方法实际上是以属性值得形式存储的函数定义。</span><br></pre></td></tr></table></figure>
+
+<h6 id="常见的HTML事件"><a href="#常见的HTML事件" class="headerlink" title="常见的HTML事件"></a>常见的HTML事件</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onchange,onclick,onmouseover,onmouseout.onkeydown,onload</span><br></pre></td></tr></table></figure>
+
+<h6 id="提取部分字符串"><a href="#提取部分字符串" class="headerlink" title="提取部分字符串"></a>提取部分字符串</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">slice()提取字符串的某个部分并在新字符串中返回被提取的部分。</span><br><span class="line">该方法设置两个参数：起始索引（位置），终止索引（结束位置）。</span><br></pre></td></tr></table></figure>
+
+<h6 id="替换字符串内容"><a href="#替换字符串内容" class="headerlink" title="替换字符串内容"></a>替换字符串内容</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">replace()方法用另一个值替换在字符串中指定的值</span><br><span class="line">str = &quot;Please visit Microsoft!&quot;;</span><br><span class="line">var n = str.replace(&quot;Microsoft&quot;, &quot;W3School&quot;);</span><br><span class="line">replace()方法不会改变调用它的字符串。它返回的是新字符串</span><br><span class="line">默认地，replace（）只替换首个匹配</span><br></pre></td></tr></table></figure>
+
+<h6 id="转换为大写和小写"><a href="#转换为大写和小写" class="headerlink" title="转换为大写和小写"></a>转换为大写和小写</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">通过toUpperCase()把字符串转换为大写</span><br><span class="line">通过toLowerCase()把字符串转换为小写</span><br><span class="line">concat()连接两个或多个字符串</span><br></pre></td></tr></table></figure>
+
+<h6 id="js数字"><a href="#js数字" class="headerlink" title="js数字"></a>js数字</h6>
     </div>
 <div>
   
@@ -386,7 +410,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#封装函数-f，使-f-的-this-指向指定的对象"><span class="nav-number">1.</span> <span class="nav-text">封装函数 f，使 f 的 this 指向指定的对象</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#获取-url-中的参数"><span class="nav-number">2.</span> <span class="nav-text">获取 url 中的参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#为Array对象添加一个去除重复项的方法"><span class="nav-number">3.</span> <span class="nav-text">为Array对象添加一个去除重复项的方法</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#封装函数-f，使-f-的-this-指向指定的对象"><span class="nav-number">1.</span> <span class="nav-text">封装函数 f，使 f 的 this 指向指定的对象</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#获取-url-中的参数"><span class="nav-number">2.</span> <span class="nav-text">获取 url 中的参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#为Array对象添加一个去除重复项的方法"><span class="nav-number">3.</span> <span class="nav-text">为Array对象添加一个去除重复项的方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#外部JavaScript的优势"><span class="nav-number">4.</span> <span class="nav-text">外部JavaScript的优势</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#JavaScript显示方案"><span class="nav-number">5.</span> <span class="nav-text">JavaScript显示方案</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#访问对象的属性"><span class="nav-number">6.</span> <span class="nav-text">访问对象的属性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#访问对象方法"><span class="nav-number">7.</span> <span class="nav-text">访问对象方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#常见的HTML事件"><span class="nav-number">8.</span> <span class="nav-text">常见的HTML事件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#提取部分字符串"><span class="nav-number">9.</span> <span class="nav-text">提取部分字符串</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#替换字符串内容"><span class="nav-number">10.</span> <span class="nav-text">替换字符串内容</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#转换为大写和小写"><span class="nav-number">11.</span> <span class="nav-text">转换为大写和小写</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#js数字"><span class="nav-number">12.</span> <span class="nav-text">js数字</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
