@@ -66,17 +66,17 @@
   };
 </script>
 
-  <meta name="description" content="封装函数 f，使 f 的 this 指向指定的对象123 function bindThis(f, oTarget) &amp;#123;     return f.bind(oTarget);&amp;#125;获取 url 中的参数 指定参数名称，返回该参数的值 或者 空字符串 不指定参数名称，返回全部的参数对象 或者 {} 如果存在多个同名参数，则返回数组">
+  <meta name="description" content="封装函数 f，使 f 的 this 指向指定的对象 function bindThis(f, oTarget) {      return f.bind(oTarget); } 获取 url 中的参数 指定参数名称，返回该参数的值 或者 空字符串 不指定参数名称，返回全部的参数对象 或者 {} 如果存在多个同名参数，则返回数组">
 <meta property="og:type" content="article">
 <meta property="og:title" content="编程习题">
 <meta property="og:url" content="https://yoursite.com/2019/10/11/qdPractice/index.html">
-<meta property="og:site_name" content="DRSBlog">
-<meta property="og:description" content="封装函数 f，使 f 的 this 指向指定的对象123 function bindThis(f, oTarget) &amp;#123;     return f.bind(oTarget);&amp;#125;获取 url 中的参数 指定参数名称，返回该参数的值 或者 空字符串 不指定参数名称，返回全部的参数对象 或者 {} 如果存在多个同名参数，则返回数组">
+<meta property="og:site_name" content="DongXiaoFan">
+<meta property="og:description" content="封装函数 f，使 f 的 this 指向指定的对象 function bindThis(f, oTarget) {      return f.bind(oTarget); } 获取 url 中的参数 指定参数名称，返回该参数的值 或者 空字符串 不指定参数名称，返回全部的参数对象 或者 {} 如果存在多个同名参数，则返回数组">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:updated_time" content="2019-11-18T09:24:18.598Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编程习题">
-<meta name="twitter:description" content="封装函数 f，使 f 的 this 指向指定的对象123 function bindThis(f, oTarget) &amp;#123;     return f.bind(oTarget);&amp;#125;获取 url 中的参数 指定参数名称，返回该参数的值 或者 空字符串 不指定参数名称，返回全部的参数对象 或者 {} 如果存在多个同名参数，则返回数组">
+<meta name="twitter:description" content="封装函数 f，使 f 的 this 指向指定的对象 function bindThis(f, oTarget) {      return f.bind(oTarget); } 获取 url 中的参数 指定参数名称，返回该参数的值 或者 空字符串 不指定参数名称，返回全部的参数对象 或者 {} 如果存在多个同名参数，则返回数组">
   <link rel="canonical" href="https://yoursite.com/2019/10/11/qdPractice/">
 
 
@@ -91,7 +91,7 @@
   };
 </script>
 
-  <title>编程习题 | DRSBlog</title>
+  <title>编程习题 | DongXiaoFan</title>
   
 
 
@@ -138,7 +138,7 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">DRSBlog</span>
+        <span class="site-title">DongXiaoFan</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -248,7 +248,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DRSBlog">
+      <meta itemprop="name" content="DongXiaoFan">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">编程习题
@@ -294,46 +294,106 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h6 id="封装函数-f，使-f-的-this-指向指定的对象"><a href="#封装函数-f，使-f-的-this-指向指定的对象" class="headerlink" title="封装函数 f，使 f 的 this 指向指定的对象"></a>封装函数 f，使 f 的 this 指向指定的对象</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> function bindThis(f, oTarget) &#123;</span><br><span class="line">     return f.bind(oTarget);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h6 id="获取-url-中的参数"><a href="#获取-url-中的参数" class="headerlink" title="获取 url 中的参数"></a>获取 url 中的参数</h6><ol>
+        <h6 id="封装函数-f，使-f-的-this-指向指定的对象"><a href="#封装函数-f，使-f-的-this-指向指定的对象" class="headerlink" title="封装函数 f，使 f 的 this 指向指定的对象"></a>封装函数 f，使 f 的 this 指向指定的对象</h6><pre><code> function bindThis(f, oTarget) {
+     return f.bind(oTarget);
+} </code></pre><h6 id="获取-url-中的参数"><a href="#获取-url-中的参数" class="headerlink" title="获取 url 中的参数"></a>获取 url 中的参数</h6><ol>
 <li>指定参数名称，返回该参数的值 或者 空字符串</li>
 <li>不指定参数名称，返回全部的参数对象 或者 {}</li>
 <li>如果存在多个同名参数，则返回数组</li>
 </ol><a id="more"></a>
-
-
 <p>输入：<a href="http://www.nowcoder.com?key=1&amp;key=2&amp;key=3&amp;test=4#hehe" target="_blank" rel="noopener">http://www.nowcoder.com?key=1&amp;key=2&amp;key=3&amp;test=4#hehe</a> key</p>
 <p>输出：[1,2,3]</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">function getUrlParam(sUrl, sKey) &#123;</span><br><span class="line">    var param = sUrl.split(&apos;#&apos;)[0].split(&apos;?&apos;)[1];</span><br><span class="line">    if (sKey)&#123;//指定参数名称</span><br><span class="line">        var strs = param.split(&apos;&amp;&apos;);</span><br><span class="line">        var arrs = new Array();//如果存在多个同名参数，则返回数组</span><br><span class="line">        for(var i = 0; i &lt; strs.length; i++)&#123;</span><br><span class="line">            var tmp = strs[i].split(&apos;=&apos;);</span><br><span class="line">            if(tmp[0] == sKey)&#123;</span><br><span class="line">                arrs.push(tmp[1]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(arrs.length == 1)&#123;//返回该参数的值或者字符串</span><br><span class="line">            return arrs[0];</span><br><span class="line">        &#125; else if(arrs.length == 0)&#123;</span><br><span class="line">            return &quot;&quot;;</span><br><span class="line">        &#125;else &#123;</span><br><span class="line">            return arrs;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;else &#123;//不指定参数名称，返回全部的参数对象 或者&#123;&#125;</span><br><span class="line">        if(param == undefined || param == &quot;&quot;)&#123;</span><br><span class="line">            return &#123;&#125;;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            var strs = param.split(&apos;&amp;&apos;);</span><br><span class="line">            var arrObj = new Object();</span><br><span class="line">            for(var i = 0; i &lt; strs.length; i++)&#123;</span><br><span class="line">                var tmp = strs[i].split(&apos;=&apos;);</span><br><span class="line">                if(!(tmp[0] in arrObj)) &#123;</span><br><span class="line">                    arrObj[tmp[0]] = [];</span><br><span class="line">                &#125;</span><br><span class="line">                 arrObj[tmp[0]].push(tmp[1]);</span><br><span class="line">            &#125;</span><br><span class="line">             return arrObj;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h6 id="为Array对象添加一个去除重复项的方法"><a href="#为Array对象添加一个去除重复项的方法" class="headerlink" title="为Array对象添加一个去除重复项的方法"></a>为Array对象添加一个去除重复项的方法</h6><p>输入：[false, true, undefined, null, NaN, 0, 1, {}, {}, ‘a’, ‘a’, NaN]</p>
+<pre><code>function getUrlParam(sUrl, sKey) {
+    var param = sUrl.split(&#39;#&#39;)[0].split(&#39;?&#39;)[1];
+    if (sKey){//指定参数名称
+        var strs = param.split(&#39;&amp;&#39;);
+        var arrs = new Array();//如果存在多个同名参数，则返回数组
+        for(var i = 0; i &lt; strs.length; i++){
+            var tmp = strs[i].split(&#39;=&#39;);
+            if(tmp[0] == sKey){
+                arrs.push(tmp[1]);
+            }
+        }
+        if(arrs.length == 1){//返回该参数的值或者字符串
+            return arrs[0];
+        } else if(arrs.length == 0){
+            return &quot;&quot;;
+        }else {
+            return arrs;
+        }
+    }else {//不指定参数名称，返回全部的参数对象 或者{}
+        if(param == undefined || param == &quot;&quot;){
+            return {};
+        } else {
+            var strs = param.split(&#39;&amp;&#39;);
+            var arrObj = new Object();
+            for(var i = 0; i &lt; strs.length; i++){
+                var tmp = strs[i].split(&#39;=&#39;);
+                if(!(tmp[0] in arrObj)) {
+                    arrObj[tmp[0]] = [];
+                }
+                 arrObj[tmp[0]].push(tmp[1]);
+            }
+             return arrObj;
+        }
+    } 
+}</code></pre><h6 id="为Array对象添加一个去除重复项的方法"><a href="#为Array对象添加一个去除重复项的方法" class="headerlink" title="为Array对象添加一个去除重复项的方法"></a>为Array对象添加一个去除重复项的方法</h6><p>输入：[false, true, undefined, null, NaN, 0, 1, {}, {}, ‘a’, ‘a’, NaN]</p>
 <p>输出：[false, true, undefined, null, NaN, 0, 1, {}, {}, ‘a’]</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.uniq = function () &#123;</span><br><span class="line">    var resArr = [];</span><br><span class="line">    var flag = true;</span><br><span class="line">    for(var i = 0; i &lt; this.length; i++)&#123;</span><br><span class="line">        if(resArr.indesOf(this.length[i]) == -1)&#123;</span><br><span class="line">            if(this[i] != this[i])&#123;//排除NAN</span><br><span class="line">                if(flag)&#123;</span><br><span class="line">                    resArr.push(this[i]);</span><br><span class="line">                    flag = false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;else &#123;</span><br><span class="line">                resArr.push(this[i])</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return resArr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>Array.prototype.uniq = function () {
+    var resArr = [];
+    var flag = true;
+    for(var i = 0; i &lt; this.length; i++){
+        if(resArr.indesOf(this.length[i]) == -1){
+            if(this[i] != this[i]){//排除NAN
+                if(flag){
+                    resArr.push(this[i]);
+                    flag = false;
+                }
+            }else {
+                resArr.push(this[i])
+            }
+        }
+    }
+    return resArr;
+}</code></pre><h6 id="外部JavaScript的优势"><a href="#外部JavaScript的优势" class="headerlink" title="外部JavaScript的优势"></a>外部JavaScript的优势</h6><pre><code>分离了HTML和代码
+使HTML和JavaScript更易于阅读和维护
+已缓存的JavaScript文件可加速页面加载
+如需向一张页面添加多个脚本文件，，请使用多个script标签</code></pre><h6 id="JavaScript显示方案"><a href="#JavaScript显示方案" class="headerlink" title="JavaScript显示方案"></a>JavaScript显示方案</h6><pre><code>使用window.alert()写入警告框
+使用document.write()写入HTML输出
+使用innerHTML写入HTML元素
+使用console.log()写入浏览器控制台</code></pre><h6 id="访问对象的属性"><a href="#访问对象的属性" class="headerlink" title="访问对象的属性"></a>访问对象的属性</h6><pre><code>objectName.propertyName
+objectName[&quot;propertyName&quot;]</code></pre><h6 id="访问对象方法"><a href="#访问对象方法" class="headerlink" title="访问对象方法"></a>访问对象方法</h6><pre><code>objectName.methodName()
 
-<h6 id="外部JavaScript的优势"><a href="#外部JavaScript的优势" class="headerlink" title="外部JavaScript的优势"></a>外部JavaScript的优势</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">分离了HTML和代码</span><br><span class="line">使HTML和JavaScript更易于阅读和维护</span><br><span class="line">已缓存的JavaScript文件可加速页面加载</span><br><span class="line">如需向一张页面添加多个脚本文件，，请使用多个script标签</span><br></pre></td></tr></table></figure>
-
-<h6 id="JavaScript显示方案"><a href="#JavaScript显示方案" class="headerlink" title="JavaScript显示方案"></a>JavaScript显示方案</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">使用window.alert()写入警告框</span><br><span class="line">使用document.write()写入HTML输出</span><br><span class="line">使用innerHTML写入HTML元素</span><br><span class="line">使用console.log()写入浏览器控制台</span><br></pre></td></tr></table></figure>
-
-<h6 id="访问对象的属性"><a href="#访问对象的属性" class="headerlink" title="访问对象的属性"></a>访问对象的属性</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">objectName.propertyName</span><br><span class="line">objectName[&quot;propertyName&quot;]</span><br></pre></td></tr></table></figure>
-
-<h6 id="访问对象方法"><a href="#访问对象方法" class="headerlink" title="访问对象方法"></a>访问对象方法</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">objectName.methodName()</span><br><span class="line"></span><br><span class="line">name = person.fullName();</span><br><span class="line">如果不使用()访问fullName方法，则将返回函数定义</span><br><span class="line">name = person.fullName;</span><br><span class="line">方法实际上是以属性值得形式存储的函数定义。</span><br></pre></td></tr></table></figure>
-
-<h6 id="常见的HTML事件"><a href="#常见的HTML事件" class="headerlink" title="常见的HTML事件"></a>常见的HTML事件</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onchange,onclick,onmouseover,onmouseout.onkeydown,onload</span><br></pre></td></tr></table></figure>
-
-<h6 id="提取部分字符串"><a href="#提取部分字符串" class="headerlink" title="提取部分字符串"></a>提取部分字符串</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">slice()提取字符串的某个部分并在新字符串中返回被提取的部分。</span><br><span class="line">该方法设置两个参数：起始索引（位置），终止索引（结束位置）。</span><br></pre></td></tr></table></figure>
-
-<h6 id="替换字符串内容"><a href="#替换字符串内容" class="headerlink" title="替换字符串内容"></a>替换字符串内容</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">replace()方法用另一个值替换在字符串中指定的值</span><br><span class="line">str = &quot;Please visit Microsoft!&quot;;</span><br><span class="line">var n = str.replace(&quot;Microsoft&quot;, &quot;W3School&quot;);</span><br><span class="line">replace()方法不会改变调用它的字符串。它返回的是新字符串</span><br><span class="line">默认地，replace（）只替换首个匹配</span><br></pre></td></tr></table></figure>
-
-<h6 id="转换为大写和小写"><a href="#转换为大写和小写" class="headerlink" title="转换为大写和小写"></a>转换为大写和小写</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">通过toUpperCase()把字符串转换为大写</span><br><span class="line">通过toLowerCase()把字符串转换为小写</span><br><span class="line">concat()连接两个或多个字符串</span><br></pre></td></tr></table></figure>
-
-<h6 id="Number方法和属性"><a href="#Number方法和属性" class="headerlink" title="Number方法和属性"></a>Number方法和属性</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">toString()方法</span><br><span class="line">toString()以字符串返回数值</span><br><span class="line">toExponential()方法</span><br><span class="line">toExponential()返回字符串值，它包含已被四舍五入并使用指数计数法的数字</span><br><span class="line">toFixed()方法</span><br><span class="line">toFixed()返回字符串值，它包含了指定位数小数的数字</span><br></pre></td></tr></table></figure>
-
-<h6 id="把变量转换为数值"><a href="#把变量转换为数值" class="headerlink" title="把变量转换为数值"></a>把变量转换为数值</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Number(),parseInt(),parseFloat()</span><br></pre></td></tr></table></figure>
-
-<h6 id="数组是对象"><a href="#数组是对象" class="headerlink" title="数组是对象"></a>数组是对象</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">数组是一种特殊类型的对象。在JavaScript中对数组使用typeof运算符会返回“object”.</span><br><span class="line">但是，JavaScript数组最好以数组来描述。</span><br><span class="line">数组使用数字来访问其“元素”。</span><br></pre></td></tr></table></figure>
-
-<h6 id="如何识别数组"><a href="#如何识别数组" class="headerlink" title="如何识别数组"></a>如何识别数组</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">问题在于JavaScript运算符typeof返回“object”</span><br><span class="line">var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];</span><br><span class="line">typeof fruits;    //返回object</span><br><span class="line">typeof运算符返回“Object”，因为javascript数组属于对象</span><br><span class="line">解决方案1：ES5定义了新方法Array.isArray()</span><br><span class="line">Array.isArray(fruits);   //返回true</span><br><span class="line">解决方案2：创建自己的isArray()函数以解决此问题</span><br><span class="line">function isArray(x) &#123;</span><br><span class="line">    return x.constructor.toString().indexOf(&quot;Array&quot;) &gt; -1;</span><br><span class="line">&#125;</span><br><span class="line">解决方案3：假如对象由给定的构造器创建，则instanceof运算符返回true：</span><br><span class="line">var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];</span><br><span class="line">fruits instanceof Array   //返回true</span><br></pre></td></tr></table></figure>
-
-<h6 id="JavaScript-数组方法"><a href="#JavaScript-数组方法" class="headerlink" title="JavaScript 数组方法"></a>JavaScript 数组方法</h6>
+name = person.fullName();
+如果不使用()访问fullName方法，则将返回函数定义
+name = person.fullName;
+方法实际上是以属性值得形式存储的函数定义。</code></pre><h6 id="常见的HTML事件"><a href="#常见的HTML事件" class="headerlink" title="常见的HTML事件"></a>常见的HTML事件</h6><pre><code>onchange,onclick,onmouseover,onmouseout.onkeydown,onload</code></pre><h6 id="提取部分字符串"><a href="#提取部分字符串" class="headerlink" title="提取部分字符串"></a>提取部分字符串</h6><pre><code>slice()提取字符串的某个部分并在新字符串中返回被提取的部分。
+该方法设置两个参数：起始索引（位置），终止索引（结束位置）。</code></pre><h6 id="替换字符串内容"><a href="#替换字符串内容" class="headerlink" title="替换字符串内容"></a>替换字符串内容</h6><pre><code>replace()方法用另一个值替换在字符串中指定的值
+str = &quot;Please visit Microsoft!&quot;;
+var n = str.replace(&quot;Microsoft&quot;, &quot;W3School&quot;);
+replace()方法不会改变调用它的字符串。它返回的是新字符串
+默认地，replace（）只替换首个匹配</code></pre><h6 id="转换为大写和小写"><a href="#转换为大写和小写" class="headerlink" title="转换为大写和小写"></a>转换为大写和小写</h6><pre><code>通过toUpperCase()把字符串转换为大写
+通过toLowerCase()把字符串转换为小写
+concat()连接两个或多个字符串</code></pre><h6 id="Number方法和属性"><a href="#Number方法和属性" class="headerlink" title="Number方法和属性"></a>Number方法和属性</h6><pre><code>toString()方法
+toString()以字符串返回数值
+toExponential()方法
+toExponential()返回字符串值，它包含已被四舍五入并使用指数计数法的数字
+toFixed()方法
+toFixed()返回字符串值，它包含了指定位数小数的数字</code></pre><h6 id="把变量转换为数值"><a href="#把变量转换为数值" class="headerlink" title="把变量转换为数值"></a>把变量转换为数值</h6><pre><code>Number(),parseInt(),parseFloat()</code></pre><h6 id="数组是对象"><a href="#数组是对象" class="headerlink" title="数组是对象"></a>数组是对象</h6><pre><code>数组是一种特殊类型的对象。在JavaScript中对数组使用typeof运算符会返回“object”.
+但是，JavaScript数组最好以数组来描述。
+数组使用数字来访问其“元素”。</code></pre><h6 id="如何识别数组"><a href="#如何识别数组" class="headerlink" title="如何识别数组"></a>如何识别数组</h6><pre><code>问题在于JavaScript运算符typeof返回“object”
+var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];
+typeof fruits;    //返回object
+typeof运算符返回“Object”，因为javascript数组属于对象
+解决方案1：ES5定义了新方法Array.isArray()
+Array.isArray(fruits);   //返回true
+解决方案2：创建自己的isArray()函数以解决此问题
+function isArray(x) {
+    return x.constructor.toString().indexOf(&quot;Array&quot;) &gt; -1;
+}
+解决方案3：假如对象由给定的构造器创建，则instanceof运算符返回true：
+var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];
+fruits instanceof Array   //返回true</code></pre><h6 id="JavaScript-数组方法"><a href="#JavaScript-数组方法" class="headerlink" title="JavaScript 数组方法"></a>JavaScript 数组方法</h6>
     </div>
 <div>
   
@@ -436,7 +496,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

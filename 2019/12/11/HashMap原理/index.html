@@ -66,17 +66,17 @@
   };
 </script>
 
-  <meta name="description" content="基本使用1234很方便为我们提供了key-value的形式存取数据，get方法取数据Map&amp;lt;String, String&amp;gt; hashMap = new HashMap&amp;lt;String, String&amp;gt;();hashMap.put(&amp;quot;name&amp;quot;, &amp;quot;josan&amp;quot;);String name = hashMap.get(&amp;quot;name&amp;">
+  <meta name="description" content="基本使用很方便为我们提供了key-value的形式存取数据，get方法取数据 Map&amp;lt;String, String&amp;gt; hashMap = new HashMap&amp;lt;String, String&amp;gt;(); hashMap.put(&amp;quot;name&amp;quot;, &amp;quot;josan&amp;quot;); String name = hashMap.get(&amp;quot;name&amp;q">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HashMap原理">
 <meta property="og:url" content="https://yoursite.com/2019/12/11/HashMap原理/index.html">
-<meta property="og:site_name" content="DRSBlog">
-<meta property="og:description" content="基本使用1234很方便为我们提供了key-value的形式存取数据，get方法取数据Map&amp;lt;String, String&amp;gt; hashMap = new HashMap&amp;lt;String, String&amp;gt;();hashMap.put(&amp;quot;name&amp;quot;, &amp;quot;josan&amp;quot;);String name = hashMap.get(&amp;quot;name&amp;">
+<meta property="og:site_name" content="DongXiaoFan">
+<meta property="og:description" content="基本使用很方便为我们提供了key-value的形式存取数据，get方法取数据 Map&amp;lt;String, String&amp;gt; hashMap = new HashMap&amp;lt;String, String&amp;gt;(); hashMap.put(&amp;quot;name&amp;quot;, &amp;quot;josan&amp;quot;); String name = hashMap.get(&amp;quot;name&amp;q">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:updated_time" content="2019-12-11T09:52:09.440Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HashMap原理">
-<meta name="twitter:description" content="基本使用1234很方便为我们提供了key-value的形式存取数据，get方法取数据Map&amp;lt;String, String&amp;gt; hashMap = new HashMap&amp;lt;String, String&amp;gt;();hashMap.put(&amp;quot;name&amp;quot;, &amp;quot;josan&amp;quot;);String name = hashMap.get(&amp;quot;name&amp;">
+<meta name="twitter:description" content="基本使用很方便为我们提供了key-value的形式存取数据，get方法取数据 Map&amp;lt;String, String&amp;gt; hashMap = new HashMap&amp;lt;String, String&amp;gt;(); hashMap.put(&amp;quot;name&amp;quot;, &amp;quot;josan&amp;quot;); String name = hashMap.get(&amp;quot;name&amp;q">
   <link rel="canonical" href="https://yoursite.com/2019/12/11/HashMap原理/">
 
 
@@ -91,7 +91,7 @@
   };
 </script>
 
-  <title>HashMap原理 | DRSBlog</title>
+  <title>HashMap原理 | DongXiaoFan</title>
   
 
 
@@ -138,7 +138,7 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">DRSBlog</span>
+        <span class="site-title">DongXiaoFan</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -248,7 +248,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DRSBlog">
+      <meta itemprop="name" content="DongXiaoFan">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">HashMap原理
@@ -286,11 +286,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h6 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">很方便为我们提供了key-value的形式存取数据，get方法取数据</span><br><span class="line">Map&lt;String, String&gt; hashMap = new HashMap&lt;String, String&gt;();</span><br><span class="line">hashMap.put(&quot;name&quot;, &quot;josan&quot;);</span><br><span class="line">String name = hashMap.get(&quot;name&quot;);</span><br></pre></td></tr></table></figure><a id="more"></a>
-
-<h6 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HashMap继承了Map接口，实现了Serializable等接口（序列化 可串行化 可序列化）</span><br></pre></td></tr></table></figure>
-
-<h6 id="LinkedHashMap"><a href="#LinkedHashMap" class="headerlink" title="LinkedHashMap"></a>LinkedHashMap</h6><p>有顺序地去存储key-value时，就需要使用LinkedHashMap了。</p>
+        <h6 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h6><pre><code>很方便为我们提供了key-value的形式存取数据，get方法取数据
+Map&lt;String, String&gt; hashMap = new HashMap&lt;String, String&gt;();
+hashMap.put(&quot;name&quot;, &quot;josan&quot;);
+String name = hashMap.get(&quot;name&quot;);</code></pre><a id="more"></a><h6 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h6><pre><code>HashMap继承了Map接口，实现了Serializable等接口（序列化 可串行化 可序列化）
+</code></pre><h6 id="LinkedHashMap"><a href="#LinkedHashMap" class="headerlink" title="LinkedHashMap"></a>LinkedHashMap</h6><p>有顺序地去存储key-value时，就需要使用LinkedHashMap了。</p>
 
     </div>
 <div>
@@ -394,7 +394,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

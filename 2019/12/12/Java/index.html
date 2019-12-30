@@ -66,17 +66,17 @@
   };
 </script>
 
-  <meta name="description" content="Java使用在使用公司框架做模块功能练习时遇到的相关问题记录Java中for循环的使用123456789101112131415161718清单1：遍历数组的传统方式建立一个数组int[] integers = &amp;#123;1,2,3,4&amp;#125;;开始遍历for (int j = 0; j &amp;lt; integers.length; j++)&amp;#123;    int i = integers">
+  <meta name="description" content="Java使用在使用公司框架做模块功能练习时遇到的相关问题记录Java中for循环的使用清单1：遍历数组的传统方式 建立一个数组 int[] integers = {1,2,3,4}; 开始遍历 for (int j = 0; j &amp;lt; integers.length; j++){     int i = integers[j];     System.out.println(i); }  清单">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java">
 <meta property="og:url" content="https://yoursite.com/2019/12/12/Java/index.html">
-<meta property="og:site_name" content="DRSBlog">
-<meta property="og:description" content="Java使用在使用公司框架做模块功能练习时遇到的相关问题记录Java中for循环的使用123456789101112131415161718清单1：遍历数组的传统方式建立一个数组int[] integers = &amp;#123;1,2,3,4&amp;#125;;开始遍历for (int j = 0; j &amp;lt; integers.length; j++)&amp;#123;    int i = integers">
+<meta property="og:site_name" content="DongXiaoFan">
+<meta property="og:description" content="Java使用在使用公司框架做模块功能练习时遇到的相关问题记录Java中for循环的使用清单1：遍历数组的传统方式 建立一个数组 int[] integers = {1,2,3,4}; 开始遍历 for (int j = 0; j &amp;lt; integers.length; j++){     int i = integers[j];     System.out.println(i); }  清单">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:updated_time" content="2019-12-23T07:07:42.917Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java">
-<meta name="twitter:description" content="Java使用在使用公司框架做模块功能练习时遇到的相关问题记录Java中for循环的使用123456789101112131415161718清单1：遍历数组的传统方式建立一个数组int[] integers = &amp;#123;1,2,3,4&amp;#125;;开始遍历for (int j = 0; j &amp;lt; integers.length; j++)&amp;#123;    int i = integers">
+<meta name="twitter:description" content="Java使用在使用公司框架做模块功能练习时遇到的相关问题记录Java中for循环的使用清单1：遍历数组的传统方式 建立一个数组 int[] integers = {1,2,3,4}; 开始遍历 for (int j = 0; j &amp;lt; integers.length; j++){     int i = integers[j];     System.out.println(i); }  清单">
   <link rel="canonical" href="https://yoursite.com/2019/12/12/Java/">
 
 
@@ -91,7 +91,7 @@
   };
 </script>
 
-  <title>Java | DRSBlog</title>
+  <title>Java | DongXiaoFan</title>
   
 
 
@@ -138,7 +138,7 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">DRSBlog</span>
+        <span class="site-title">DongXiaoFan</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -248,7 +248,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DRSBlog">
+      <meta itemprop="name" content="DongXiaoFan">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">Java
@@ -294,16 +294,73 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h6 id="Java使用"><a href="#Java使用" class="headerlink" title="Java使用"></a>Java使用</h6><p>在使用公司框架做模块功能练习时遇到的相关问题记录</p><h6 id="Java中for循环的使用"><a href="#Java中for循环的使用" class="headerlink" title="Java中for循环的使用"></a>Java中for循环的使用</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">清单1：遍历数组的传统方式</span><br><span class="line">建立一个数组</span><br><span class="line">int[] integers = &#123;1,2,3,4&#125;;</span><br><span class="line">开始遍历</span><br><span class="line">for (int j = 0; j &lt; integers.length; j++)&#123;</span><br><span class="line">    int i = integers[j];</span><br><span class="line">    System.out.println(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">清单2：遍历Collection对象的传统方式</span><br><span class="line">建立一个Collection</span><br><span class="line">String[] strings = &#123;&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;&#125;;</span><br><span class="line">Collection stringList = java.util.Arrays.asList(strings);</span><br><span class="line">开始遍历</span><br><span class="line">for (Iterator itr = stringList.iterator() ; itr.hasNext();)&#123;</span><br><span class="line">    Object str = itr.next();</span><br><span class="line">     System.out.println(str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a>
+        <h6 id="Java使用"><a href="#Java使用" class="headerlink" title="Java使用"></a>Java使用</h6><p>在使用公司框架做模块功能练习时遇到的相关问题记录</p><h6 id="Java中for循环的使用"><a href="#Java中for循环的使用" class="headerlink" title="Java中for循环的使用"></a>Java中for循环的使用</h6><pre><code>清单1：遍历数组的传统方式
+建立一个数组
+int[] integers = {1,2,3,4};
+开始遍历
+for (int j = 0; j &lt; integers.length; j++){
+    int i = integers[j];
+    System.out.println(i);
+}
 
+清单2：遍历Collection对象的传统方式
+建立一个Collection
+String[] strings = {&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;};
+Collection stringList = java.util.Arrays.asList(strings);
+开始遍历
+for (Iterator itr = stringList.iterator() ; itr.hasNext();){
+    Object str = itr.next();
+     System.out.println(str);
+}</code></pre><a id="more"></a>
+<h6 id="第二种for循环"><a href="#第二种for循环" class="headerlink" title="第二种for循环"></a>第二种for循环</h6><pre><code>清单3：遍历数组的简单方式
+for（循环变量类型 循环变量名称 ： 要遍历的对象）循环体
+可这样写
+建立一个数组
+int[] integers = {1,2,3,4}
 
-<h6 id="第二种for循环"><a href="#第二种for循环" class="headerlink" title="第二种for循环"></a>第二种for循环</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">清单3：遍历数组的简单方式</span><br><span class="line">for（循环变量类型 循环变量名称 ： 要遍历的对象）循环体</span><br><span class="line">可这样写</span><br><span class="line">建立一个数组</span><br><span class="line">int[] integers = &#123;1,2,3,4&#125;</span><br><span class="line"></span><br><span class="line">开始遍历</span><br><span class="line">for(int i : integers) &#123;</span><br><span class="line">    System.out.println(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">清单4：遍历数组的简单方式的等价代码</span><br><span class="line">建立一个数组</span><br><span class="line"> int[] integers = &#123;1， 2， 3， 4&#125;;</span><br><span class="line"> </span><br><span class="line"> 开始遍历 </span><br><span class="line"> for (int 变量名甲 = 0; 变量名甲 &lt; integers.length; 变量名甲++) &#123;</span><br><span class="line">     System.out.println(integers[变量名甲]);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">清单5：遍历Collection的简单方式</span><br><span class="line"> 建立一个Collection</span><br><span class="line"> String[] strings = &#123;&quot;A&quot;， &quot;B&quot;， &quot;C&quot;， &quot;D&quot;&#125;;</span><br><span class="line"> Collection list = java.util.Arrays.asList(strings);</span><br><span class="line"></span><br><span class="line"> 开始遍历</span><br><span class="line"> for (Object str : list) &#123;</span><br><span class="line">     System.out.println(str);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">清单6：遍历Collection的简单方式的等价代码</span><br><span class="line"> 建立一个Collection</span><br><span class="line"> String[] strings = &#123;&quot;A&quot;， &quot;B&quot;， &quot;C&quot;， &quot;D&quot;&#125;;</span><br><span class="line"> Collection stringList = java.util.Arrays.asList(strings);</span><br><span class="line"></span><br><span class="line"> 开始遍历</span><br><span class="line"> for (Iterator 变量名乙 = list.iterator(); 变量名乙.hasNext();) &#123;</span><br><span class="line">     Object str = 变量名乙.next();</span><br><span class="line">     System.out.println(str);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+开始遍历
+for(int i : integers) {
+    System.out.println(i);
+}
 
-<h6 id="Java拼接字符串"><a href="#Java拼接字符串" class="headerlink" title="Java拼接字符串"></a>Java拼接字符串</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">append方式（需要拼接至少三个量，考虑使用StringBuffer#append()以避免临时字符串的产生）</span><br><span class="line">StringBuffer buf=new StringBuffer()</span><br><span class="line">buf.append(&quot;a&quot;);</span><br><span class="line">if(someCondition)&#123;</span><br><span class="line">    buf.append(&quot;b&quot;);</span><br><span class="line">&#125;</span><br><span class="line">buf.append(&quot;c&quot;);</span><br><span class="line">String d=buf.toString();</span><br></pre></td></tr></table></figure>
+清单4：遍历数组的简单方式的等价代码
+建立一个数组
+ int[] integers = {1， 2， 3， 4};
 
-<h6 id="java中两种字符串定义方式的区别"><a href="#java中两种字符串定义方式的区别" class="headerlink" title="java中两种字符串定义方式的区别"></a>java中两种字符串定义方式的区别</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">直接赋值：String str = &quot;Hello World&quot;</span><br><span class="line">构造方法实例化：String str = new String(&quot;Hello World&quot;)</span><br></pre></td></tr></table></figure>
+ 开始遍历 
+ for (int 变量名甲 = 0; 变量名甲 &lt; integers.length; 变量名甲++) {
+     System.out.println(integers[变量名甲]);
+ }
 
+清单5：遍历Collection的简单方式
+ 建立一个Collection
+ String[] strings = {&quot;A&quot;， &quot;B&quot;， &quot;C&quot;， &quot;D&quot;};
+ Collection list = java.util.Arrays.asList(strings);
 
+ 开始遍历
+ for (Object str : list) {
+     System.out.println(str);
+ }
+
+清单6：遍历Collection的简单方式的等价代码
+ 建立一个Collection
+ String[] strings = {&quot;A&quot;， &quot;B&quot;， &quot;C&quot;， &quot;D&quot;};
+ Collection stringList = java.util.Arrays.asList(strings);
+
+ 开始遍历
+ for (Iterator 变量名乙 = list.iterator(); 变量名乙.hasNext();) {
+     Object str = 变量名乙.next();
+     System.out.println(str);
+ }</code></pre><h6 id="Java拼接字符串"><a href="#Java拼接字符串" class="headerlink" title="Java拼接字符串"></a>Java拼接字符串</h6><pre><code>append方式（需要拼接至少三个量，考虑使用StringBuffer#append()以避免临时字符串的产生）
+StringBuffer buf=new StringBuffer()
+buf.append(&quot;a&quot;);
+if(someCondition){
+    buf.append(&quot;b&quot;);
+}
+buf.append(&quot;c&quot;);
+String d=buf.toString();</code></pre><h6 id="java中两种字符串定义方式的区别"><a href="#java中两种字符串定义方式的区别" class="headerlink" title="java中两种字符串定义方式的区别"></a>java中两种字符串定义方式的区别</h6><pre><code>直接赋值：String str = &quot;Hello World&quot;
+构造方法实例化：String str = new String(&quot;Hello World&quot;)
+</code></pre>
     </div>
 <div>
   
@@ -406,7 +463,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
